@@ -1,27 +1,30 @@
 <template>
-  <div id="app" class="container">
-    <CompletedTodos />
-    <GetTodo />
-    <CurrentTodos />
-  </div>
+    <div>
+        <TodoItem />
+        <CreateNewElement />
+    </div>
 </template>
 
 <script>
-  import GetTodo from './components/GetTodo.vue'
-  import CurrentTodos from './components/CurrentTodos.vue'
-  import CompletedTodos from './components/CompletedTodos.vue'
-  export default {
-    components: {
-      GetTodo,
-      CurrentTodos,
-      CompletedTodos
-    }
+import TodoItem from "@/components/TodoItem.vue";
+import CreateNewElement from "@/components/CreateNewElement";
 
+export default {
+  name: 'App',
+  components: {
+      TodoItem, CreateNewElement
   }
+}
 </script>
 
 <style>
-  body {
-    font-family: Helvetica, sans-serif;
-  }
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -o-font-smoothing: antialiased;
+        font-family: 'Open Sans', sans-serif;
+    }
 </style>
